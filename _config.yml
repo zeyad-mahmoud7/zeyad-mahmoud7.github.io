@@ -1,3 +1,3 @@
-title: Zeyad's Blog
-description: Cybersecurity and Web Security Insights
 remote_theme: pages-themes/hacker@v0.2.0
+plugins:
+  - jekyll-remote-theme
