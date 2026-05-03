@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Active Machine Write-up"
+date: 2026-05-04
+---
+
 ## **Active Machine Write-up**
 
 
