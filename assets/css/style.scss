@@ -2,24 +2,31 @@
 ---
 @import "{{ site.theme }}";
 
-/* This centers the header text/logo on all pages */
-header {
-  text-align: center !important;
-  width: 100% !important;
+/* This ensures the header and content stay separated */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* This makes the image a circle and centers it */
+header {
+  position: relative !important; /* Prevents it from floating over content */
+  width: 100% !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+}
+
 header img {
   width: 120px !important;
   height: 120px !important;
   border-radius: 50% !important;
   display: block !important;
-  margin: 0 auto 20px auto !important;
+  margin: 0 auto 15px auto !important;
   object-fit: cover;
 }
 
-/* This keeps the title and description centered */
-header h1, header p {
-  margin-left: auto !important;
-  margin-right: auto !important;
+section {
+  width: 100% !important;
+  float: none !important; /* Minimal theme uses floats, which causes overlaps */
+  margin: 0 auto !important;
 }
