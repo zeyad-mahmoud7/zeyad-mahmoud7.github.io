@@ -1,19 +1,18 @@
 ---
 layout: default
 title: Writeups
+permalink: /writeups/
 ---
 
-## 🛡️ Security Writeups
+# 🛡️ Security Writeups
 
-Below is a collection of my latest security research, CTF solutions, and technical deep-dives.
-
----
-
-### Recent Posts
-{% for post in site.posts %}
-*   **[{{ post.date | date: "%b %d, %Y" }}]** - [{{ post.title }}]({{ post.url }})
-    _{{ post.description }}_
-{% endfor %}
+{% if site.posts.size > 0 %}
+  {% for post in site.posts %}
+  * **{{ post.date | date: "%B %d, %Y" }}** — [{{ post.title }}]({{ post.url }})
+  {% endfor %}
+{% else %}
+  <p>No writeups found. Check the _posts folder!</p>
+{% endif %}
 
 ---
-[← Back to Home](index.md)
+[← Back to Home](/)
