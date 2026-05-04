@@ -4,7 +4,7 @@ remote_theme: pages-themes/minimal@v0.2.0
 plugins:
   - jekyll-remote-theme
 
-# The sidebar logo
+# sidebar logo
 logo: https://github.com/zeyad-mahmoud7.png
 
-favicon: /favicon.ico
+favicon: ./favicon.ico
