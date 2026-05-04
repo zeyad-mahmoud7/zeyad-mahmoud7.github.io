@@ -4,6 +4,7 @@ title: "Hack The Box: Active Machine Write-up"
 date: 2026-05-04
 categories: [Writeups, HTB]
 tags: [Windows, Kerberoasting, GPP, SMB]
+author: Zeyad Mahmoud
 ---
 
 ## **Active Machine Write-up**
