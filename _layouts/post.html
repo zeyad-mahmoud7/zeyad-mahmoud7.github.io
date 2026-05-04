@@ -1,17 +1,9 @@
 ---
 layout: default
 ---
-<article class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <p class="post-meta" style="color: #8b949e;">{{ page.date | date: "%B %d, %Y" }}</p>
+<h1>{{ page.title }}</h1>
+<p style="color: #8b949e;">{{ page.date | date: "%B %d, %Y" }}</p>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
-</article>
-
-<style>
-  .post-content h2, .post-content h3 { color: #58a6ff; margin-top: 30px; }
-  .post-content pre { background: #161b22; padding: 15px; border-radius: 6px; overflow-x: auto; border: 1px solid #30363d; }
-  .post-content code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; color: #ff7b72; }
-</style>
+<div class="post-content">
+  {{ content }}
+</div>
