@@ -81,7 +81,7 @@ password Base64 encoded: `edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh`
 
 
 * **Vulnerability:** The cpassword found in a GPP file can be decrypted using the `AES-256 key`, which was published publicly by Microsoft.
-* **Exploit:** using the `gpp-decrypt` tool in Kali, we can decrypt the cpassword and get the plain password: `GPPstillStandingStrong2k18`
+* **Exploit:** Using the `gpp-decrypt` tool in Kali, we can decrypt the cpassword and get the plain password: `GPPstillStandingStrong2k18`
 
 
 
