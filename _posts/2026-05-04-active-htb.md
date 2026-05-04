@@ -165,11 +165,11 @@ Finally, we got the `root flag`
 
 
  
-   ### **5. Lessons Learned**
+### **5. Lessons Learned **
 
 
  
-    ### **Key Takeaways**
+   #### **Key Takeaways**
 
 
 
