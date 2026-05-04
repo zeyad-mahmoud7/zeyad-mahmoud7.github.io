@@ -165,30 +165,3 @@ Finally, we got the `root flag`
 
 
  
-5. Lessons Learned
-
-
- 
-**Key Takeaways**
-
-
-
-* Anonymous SMB access can expose sensitive internal files to unauthenticated users.
-* Misconfigured share permissions may allow attackers to access confidential data such as Group Policy Preference files.
-* `cpassword` values stored in GPP files are insecure and can be decrypted using publicly known keys.
-* Weak privileged account passwords remain vulnerable to offline cracking attacks such as Kerberoasting.
-* Excessive permissions across shares can accelerate privilege escalation and full domain compromise.
-
- 
-    **Mitigation**
-
-* Disable anonymous SMB enumeration and guest access.
-* Review and restrict SMB share permissions using least privilege.
-* Remove legacy Group Policy Preference passwords and rotate exposed credentials immediately.
-* Enforce strong password policies for privileged and service accounts.
-* Implement Microsoft Active Directory Managed Service Accounts (gMSA) where possible.
-* Monitor Kerberos ticket requests for abnormal SPN activity.
-* Restrict administrative share access (`C$`, `ADMIN$`) to authorized administrators only.
-* Enable logging and alerting for suspicious authentication activity.
-
----
