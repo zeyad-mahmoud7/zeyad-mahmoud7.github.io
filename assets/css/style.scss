@@ -2,10 +2,15 @@
 ---
 @import "{{ site.theme }}";
 
+header {
+  text-align: center; /* Centers the content inside the header */
+}
+
 header img {
   width: 120px !important;
+  height: 120px !important; /* Ensures it stays a perfect circle */
   border-radius: 50% !important;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: block !important;
+  margin: 0 auto 20px auto !important; /* Forces center alignment and adds bottom spacing */
+  object-fit: cover; /* Prevents the image from stretching */
 }
