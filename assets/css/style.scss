@@ -2,42 +2,82 @@
 ---
 @import "{{ site.theme }}";
 
+/* Layout Reset */
 .wrapper {
-  max-width: 800px !important;
+  max-width: 900px !important;
   margin: 0 auto !important;
-  display: block !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
 }
 
 header {
-  width: 100% !important;
+  width: 250px !important;
   float: none !important;
-  position: relative !important;
-  text-align: center !important;
-  margin-bottom: 40px !important;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 20px;
+  position: sticky !important;
+  top: 40px;
+  text-align: left !important;
+  padding-right: 30px;
 }
 
 header img {
-  width: 120px !important;
-  height: 120px !important;
+  width: 100px !important;
+  height: 100px !important;
   border-radius: 50% !important;
-  margin: 0 auto 15px auto !important;
+  margin: 0 0 15px 0 !important;
+  border: 2px solid #eee;
+}
+
+header h1 {
+  font-size: 1.5rem !important;
+  margin-bottom: 5px !important;
+}
+
+header p {
+  font-size: 0.95rem !important;
+  color: #666;
 }
 
 section {
-  width: 100% !important;
+  width: calc(100% - 250px) !important;
   float: none !important;
-  margin: 0 !important;
+  padding-left: 20px !important;
 }
 
-.linkedin-button {
+/* Social Icons */
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a svg {
+  width: 24px;
+  height: 24px;
+  fill: #555;
+  transition: fill 0.3s;
+}
+
+.social-links a:hover svg {
+  fill: #0077b5; /* LinkedIn Blue on hover */
+}
+
+/* Professional Footer */
+footer {
+  width: 100%;
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  font-size: 0.85rem;
+  color: #999;
+  text-align: center;
+}
+
+/* Back Button */
+.back-btn {
   display: inline-block;
-  background: #0077b5;
-  color: white !important;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none !important;
-  font-weight: bold;
-  margin: 20px 0;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #444;
 }
