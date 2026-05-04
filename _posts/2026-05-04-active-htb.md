@@ -115,7 +115,7 @@ And we get the `user flag`
 ### **4. Privilege Escalation**
 
 
-#### We have noticed from the nmap results that the LDAP/S ports are open. Since LDAP was accessible, Impacket enumeration tools such as `GetADUsers.py` are viable. Using the `GetADUsers.py` script we enumerated domain users and spotted the user `Administrator`.
+#### We have noticed from the nmap results that the LDAP/S ports are open. Since LDAP was accessible, Impacket enumeration tools such as `GetADUsers.py` are viable. Using the `GetADUsers.py` script, we enumerated domain users and spotted the user `Administrator`.
 
 
 
@@ -124,21 +124,21 @@ And we get the `user flag`
 
 
 
-#### Using` GetUserSPNs.py` we can identify accounts with SPN and we find that the Administrator user has an SPN configured hence enabling `Kerberoasting`. We get a `TGS hash`
+#### Using` GetUserSPNs.py`, we can identify accounts with SPN, and we find that the Administrator user has an SPN configured, hence enabling `Kerberoasting`. We get a `TGS hash`
 
 
 
 ![alt_text](/assets/images/active/image9.png "image_tooltip")
 
 
-By saving the hash we obtained we can then do some offline bruteforcing using `hashcat` mode 13100 (-m 13100) we get the password: `Ticketmaster1968 `(Using `hashwiki` you can know which mode to use). 
+By saving the hash we obtained, we can then perform offline brute-forcing using `hashcat` in mode 13100 (-m 13100). We get the password: `Ticketmaster1968 `(Using `hashwiki`, you can know which mode to use). 
 
 
 
 ![alt_text](/assets/images/active/image10.png "image_tooltip")
 
 
-Using `smbmap` again with the Administrator’s credentials we have identified two main targets: `ADMIN$` and `C$`  
+Using `smbmap` again with the Administrator’s credentials, we have identified two main targets: `ADMIN$` and `C$`  
 
 
 
@@ -146,7 +146,7 @@ Using `smbmap` again with the Administrator’s credentials we have identified t
 ![alt_text](/assets/images/active/image11.png "image_tooltip")
 
 
-After checking both shares we found the root flag!  \
+After checking both shares, we found the root flag!  \
 C$ → Users → Administrator → Desktop → `root.txt`
 
 get root.txt 
@@ -165,11 +165,11 @@ Finally, we got the `root flag`
 ---
 
 
-## 
+ 
     **5. Lessons Learned**
 
 
-### 
+ 
     **Key Takeaways**
 
 
@@ -180,7 +180,7 @@ Finally, we got the `root flag`
 * Weak privileged account passwords remain vulnerable to offline cracking attacks such as Kerberoasting.
 * Excessive permissions across shares can accelerate privilege escalation and full domain compromise.
 
-### 
+ 
     **Mitigation**
 
 * Disable anonymous SMB enumeration and guest access.
