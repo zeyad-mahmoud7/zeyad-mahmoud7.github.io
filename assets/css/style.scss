@@ -2,10 +2,13 @@
 ---
 @import "{{ site.theme }}";
 
+/* This centers the header text/logo on all pages */
 header {
   text-align: center !important;
+  width: 100% !important;
 }
 
+/* This makes the image a circle and centers it */
 header img {
   width: 120px !important;
   height: 120px !important;
@@ -15,7 +18,8 @@ header img {
   object-fit: cover;
 }
 
-header p, header h1, header a {
-  text-align: center !important;
-  width: 100% !important;
+/* This keeps the title and description centered */
+header h1, header p {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
