@@ -114,7 +114,7 @@ And we get the `user flag`
 ### **4. Privilege Escalation**
 
 
-#### We have noticed from the nmap results that the LDAP/S ports are open. Since LDAP was accessible, Impacket enumeration tools such as `GetADUsers.py` are viable. Using the `GetADUsers.py` script, we enumerated domain users and spotted the user `Administrator`.
+We have noticed from the nmap results that the LDAP/S ports are open. Since LDAP was accessible, Impacket enumeration tools such as `GetADUsers.py` are viable. Using the `GetADUsers.py` script, we enumerated domain users and spotted the user `Administrator`.
 
 
 
