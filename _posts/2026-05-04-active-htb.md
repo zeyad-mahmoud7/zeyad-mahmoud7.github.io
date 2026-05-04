@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "HTB Machine: Active"
+title: "Hack The Box Machine: Active"
 ---
 
 # Active Machine Write-up
