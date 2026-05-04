@@ -2,11 +2,11 @@
 ---
 @import "{{ site.theme }}";
 
-// For the sidebar logo
+// sidebar pic
 header img {
-  width: 120px;     // Adjust this number to make it smaller or larger
-  height: auto;
-  border-radius: 50%; // Optional: This makes your GitHub pic a circle
+  width: 120px;       // Shrinks the size
+  border-radius: 50%; // Makes it a circle
   display: block;
-  margin: 0 auto 20px; // Centers it and adds space below
+  margin-left: auto;
+  margin-right: auto;
 }
