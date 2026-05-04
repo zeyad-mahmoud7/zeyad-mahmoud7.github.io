@@ -1,7 +1,7 @@
 ---
-layout: page
-title: "Active Machine Write-up"
-permalink: /active-htb/
+layout: post
+title: "HTB Machine: Active"
+date: 2026-05-04
 ---
 
 ## **Active Machine Write-up**
