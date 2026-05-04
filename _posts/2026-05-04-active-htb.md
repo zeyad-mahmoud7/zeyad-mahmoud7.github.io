@@ -32,8 +32,7 @@ tags: [Windows, Kerberoasting, GPP, SMB]
 nmap -sS -sV -sC -Pn -T4 10.129.31.152
 
 
-
-![alt_text](assets/images/active/image1.png "image_tooltip")
+![alt_text](/assets/images/active/image1.png "image_tooltip")
 
 
 
