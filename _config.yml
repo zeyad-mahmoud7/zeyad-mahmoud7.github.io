@@ -1,54 +1,13 @@
 title: Zeyad Mahmoud
-description: "My writeups, more coming soon..."
+description: >
+  My writeups, more coming soon... <br>
+  [LinkedIn](https://www.linkedin.com/in/zeyad-mahmoud7/)
+remote_theme: pages-themes/minimal@v0.2.0
+avatar: https://github.com/zeyad-mahmoud7.png
+
+# Built-in GitHub link
 github_username: zeyad-mahmoud7
-minimal_mistakes_skin: dark
-search: true
-search_full_content: true
 
-# Build settings
-markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
+  - jekyll-seo-tag
   - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
-
-author:
-  name   : "Zeyad Mahmoud"
-  avatar : "https://github.com/zeyad-mahmoud7.png"
-  bio    : "A curious guy"
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/zeyad-mahmoud7"
-    - label: "Linkedin"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/zeyad-mahmoud7/"
-
-defaults:
-  # _posts
-  - scope:
-      path: "_posts"
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
