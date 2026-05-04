@@ -47,7 +47,7 @@ nmap -sS -sV -sC -Pn -T4 10.129.31.152
 
 #### **Service Discovery**
 
-By attempting to connect using `smbclient` we have found that anonymous login without a password was allowed. Using `smbmap` to identify all shares’ permissions. We noticed that the `Replication` share has a `READ ONLY` access. 
+When attempting to connect with `smbclient`, we found that an anonymous login without a password was allowed. Using `smbmap` to identify all shares’ permissions. We noticed that the `Replication` share has a `READ ONLY` access. 
 
 
 
@@ -55,7 +55,7 @@ By attempting to connect using `smbclient` we have found that anonymous login wi
 ![alt_text](/assets/images/active/image2.png "image_tooltip")
 
 
-By accessing `Replication` and downloading all files inside using `mget*` we find a `Groups.xml `file which might contain usernames and passwords
+By accessing `Replication` and downloading all files inside using `mget*`, we find a `Groups.xml `file, which might contain usernames and passwords
 
 
 
@@ -63,7 +63,7 @@ By accessing `Replication` and downloading all files inside using `mget*` we fin
 ![alt_text](/assets/images/active/image3.png "image_tooltip")
 
 
-Looking inside `Groups.xml` we have successfully found a username: `SVC_TGS` and a 
+Looking inside `Groups.xml`, we have successfully found a username: `SVC_TGS` and a 
 
 password Base64 encoded: `edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh`
 
@@ -81,15 +81,15 @@ password Base64 encoded: `edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh`
 
 
 
-* **Vulnerability:** `AES-256 key` is a key published by microsoft that we can use to decrypt any cpassword find in a GPP file
-* **Exploit:** using `gpp-decrypt` in kali we can decrypt the cpassword and get the plain password: `GPPstillStandingStrong2k18`
+* **Vulnerability:** `AES-256 key` is a key published by Microsoft that we can use to decrypt any cpassword found in a GPP file
+* **Exploit:** using `gpp-decrypt` in Kali, we can decrypt the cpassword and get the plain password: `GPPstillStandingStrong2k18`
 
 
 
 ![alt_text](/assets/images/active/image5.png "image_tooltip")
 
 
-Using `smbmap` again but this time with the username and password obtained we find that we have `READ ONLY` access to NETLOGON, Replication, SYSVOL and `Users`.` `Our next` `target is the` Users share `which appeared to be a valuable target.
+Using `smbmap` again, but this time with the username and password obtained, we find that we have `READ ONLY` access to NETLOGON, Replication, SYSVOL and `Users`.` `Our next` `target is the` Users share `which appeared to be a valuable target.
 
 
 
@@ -124,7 +124,7 @@ And we get the `user flag`
 
 
 
-#### Using` GetUserSPNs.py`, we can identify accounts with SPN, and we find that the Administrator user has an SPN configured, hence enabling `Kerberoasting`. We get a `TGS hash`
+Using` GetUserSPNs.py`, we can identify accounts with SPN, and we find that the Administrator user has an SPN configured, hence enabling `Kerberoasting`. We get a `TGS hash`
 
 
 
