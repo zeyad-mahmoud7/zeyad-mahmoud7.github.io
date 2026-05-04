@@ -1,8 +1,6 @@
 title: Zeyad Mahmoud
-description: My writeups, more coming soon...
+description: A curious guy documenting his findings
 remote_theme: pages-themes/minimal@v0.2.0
 avatar: https://github.com/zeyad-mahmoud7.png
-github_username: zeyad-mahmoud7
-plugins:
-  - jekyll-seo-tag
-  - jekyll-feed
+google_analytics: 
+show_downloads: false
