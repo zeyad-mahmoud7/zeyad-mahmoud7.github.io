@@ -2,13 +2,13 @@
 layout: default
 ---
 
-# About Me
-A curious guy focused on security research and technical writeups.
+# Research & Writeups
+Welcome to my personal documentation. I focus on security research, CTF solutions, and technical deep-dives.
 
-<a href="https://www.linkedin.com/in/zeyad-mahmoud7/" class="linkedin-button">Connect on LinkedIn</a>
+### Featured Work
+* [View My Writeups](/writeups/)
+* [GitHub Repository](https://github.com/zeyad-mahmoud7)
 
----
-
-### My Work
-* 🛡️ [**View My Writeups**](/writeups/)
-* 💻 [**GitHub Profile**](https://github.com/zeyad-mahmoud7)
+<footer>
+  © 2026 Zeyad Mahmoud. All rights reserved.
+</footer>
