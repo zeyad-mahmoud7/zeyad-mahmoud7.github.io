@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Active Machine Write-up"
+permalink: /active-htb/
+---
+
 ## **Active Machine Write-up**
 
 
