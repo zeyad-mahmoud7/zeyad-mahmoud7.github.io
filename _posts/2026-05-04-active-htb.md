@@ -64,7 +64,6 @@ By accessing `Replication` and downloading all files inside using `mget*`, we fi
 
 
 Looking inside `Groups.xml`, we have successfully found a username: `SVC_TGS` and a 
-
 password Base64 encoded: `edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh`
 
 
