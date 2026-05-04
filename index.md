@@ -2,8 +2,9 @@
 layout: default
 ---
 
-# Writeups
+# About Me
+A curious guy.
 
-{% for post in site.posts %}
-* {{ post.date | date_to_string }} — [{{ post.title }}]({{ post.url }})
-{% endfor %}
+### Find my work here:
+* [**View My Writeups**](./writeups)
+* [**GitHub Profile**](https://github.com/zeyad-mahmoud7)
