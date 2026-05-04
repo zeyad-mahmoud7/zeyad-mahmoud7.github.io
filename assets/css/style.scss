@@ -1,26 +1,19 @@
 ---
 ---
-@import "{{ site.theme }}";
+@import "jekyll-theme-hacker";
 
-// This targets the header container on ALL layouts
-header, .sidebar, .sidebar-avatar {
-  text-align: center !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 header img {
   width: 120px !important;
   height: 120px !important;
   border-radius: 50% !important;
-  display: block !important;
-  margin: 0 auto 20px auto !important;
   object-fit: cover;
-}
-
-// This ensures the site title and description stay centered too
-header p, header h1, header a {
-  text-align: center !important;
-  width: 100% !important;
+  border: 2px solid #2ecc71; /* Adds a green "hacker" glow/border */
+  margin-bottom: 20px;
 }
