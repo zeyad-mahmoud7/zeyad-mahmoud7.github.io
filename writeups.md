@@ -11,7 +11,7 @@ permalink: /writeups/
   * **{{ post.date | date: "%B %d, %Y" }}** — [{{ post.title }}]({{ post.url }})
   {% endfor %}
 {% else %}
-  <p>No writeups found. Check the _posts folder!</p>
+  <p>No writeups found yet.</p>
 {% endif %}
 
 ---
