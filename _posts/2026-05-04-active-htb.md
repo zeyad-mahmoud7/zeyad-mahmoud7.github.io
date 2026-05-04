@@ -17,6 +17,8 @@ title: "Hack The Box Machine: Active"
 ### Nmap Scan
 `nmap -sS -sV -sC -Pn -T4 10.129.31.152`
 
+![Nmap Results](/assets/images/active/image1.png)
+
 **Interesting Ports:**
 * `139/tcp` SMB
 * `445/tcp` SMB
@@ -24,7 +26,11 @@ title: "Hack The Box Machine: Active"
 * `636/tcp` LDAPS
 
 ### Service Discovery
-Anonymous login was allowed. Using `smbmap`, I found `READ ONLY` access on the **Replication** share. Inside, I found `Groups.xml` which contained:
+Anonymous login was allowed. Using `smbmap`, I found `READ ONLY` access on the **Replication** share. 
+
+![SMB Enumeration](/assets/images/active/image2.png)
+
+Inside, I found `Groups.xml` which contained:
 * **Username:** `SVC_TGS`
 * **cpassword:** `edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh`
 
@@ -34,6 +40,8 @@ Anonymous login was allowed. Using `smbmap`, I found `READ ONLY` access on the *
 I used `gpp-decrypt` to crack the cpassword.
 * **Plaintext Password:** `GPPstillStandingStrong2k18`
 
+![GPP Decrypt](/assets/images/active/image3.png)
+
 Using these credentials, I accessed the **Users** share and retrieved `user.txt`.
 
 ---
@@ -41,8 +49,12 @@ Using these credentials, I accessed the **Users** share and retrieved `user.txt`
 ## 4. Privilege Escalation
 Since LDAP was accessible, I used Impacket's `GetUserSPNs.py` for **Kerberoasting**. I successfully requested a TGS hash for the **Administrator** account.
 
+![Kerberoasting](/assets/images/active/image4.png)
+
 I cracked the hash using `hashcat` (Mode 13100):
 * **Admin Password:** `Ticketmaster1968`
+
+![Hashcat Cracking](/assets/images/active/image5.png)
 
 I logged into the `C$` share as Administrator and captured the root flag.
 
