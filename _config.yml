@@ -1,9 +1,5 @@
 title: Zeyad Mahmoud
-description: Check my writeups
-remote_theme: pages-themes/minimal@v0.2.0plugins:
-  - jekyll-remote-theme
-
-# sidebar logo
-logo: https://github.com/zeyad-mahmoud7.png
-
-favicon: /favicon.ico
+description: My writeups
+remote_theme: pages-themes/minimal@v0.2.0
+google_analytics: 
+show_downloads: false
