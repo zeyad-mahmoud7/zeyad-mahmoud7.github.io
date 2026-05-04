@@ -1,13 +1,8 @@
 title: Zeyad Mahmoud
-description: >
-  My writeups, more coming soon... <br>
-  [LinkedIn](https://www.linkedin.com/in/zeyad-mahmoud7/)
+description: My writeups, more coming soon...
 remote_theme: pages-themes/minimal@v0.2.0
 avatar: https://github.com/zeyad-mahmoud7.png
-
-# Built-in GitHub link
 github_username: zeyad-mahmoud7
-
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
