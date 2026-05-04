@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "HTB: Active"
+title: "HTB Machine: Active"
 ---
 
 # Active Machine Write-up
