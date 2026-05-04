@@ -4,7 +4,9 @@ title: Writeups
 permalink: /writeups/
 ---
 
-# 🛡️ Security Writeups
+<a href="/" class="back-btn">← Back</a>
+
+# Security Writeups
 
 {% if site.posts.size > 0 %}
   {% for post in site.posts %}
@@ -14,5 +16,6 @@ permalink: /writeups/
   <p>No writeups found yet.</p>
 {% endif %}
 
----
-[← Back to Home](/)
+<footer>
+  © 2026 Zeyad Mahmoud. All rights reserved.
+</footer>
