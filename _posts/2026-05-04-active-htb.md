@@ -51,7 +51,7 @@ By attempting to connect using `smbclient` we have found that anonymous login wi
 
 
 
-![alt_text](assets/images/active/image2.png "image_tooltip")
+![alt_text](/assets/images/active/image2.png "image_tooltip")
 
 
 By accessing `Replication` and downloading all files inside using `mget*` we find a `Groups.xml `file which might contain usernames and passwords
@@ -59,7 +59,7 @@ By accessing `Replication` and downloading all files inside using `mget*` we fin
 
 
 
-![alt_text](assets/images/active/image3.png "image_tooltip")
+![alt_text](/assets/images/active/image3.png "image_tooltip")
 
 
 Looking inside `Groups.xml` we have successfully found a username: `SVC_TGS` and a 
@@ -69,7 +69,7 @@ password Base64 encoded: `edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh`
 
 
 
-![alt_text](assets/images/active/image4.png "image_tooltip")
+![alt_text](/assets/images/active/image4.png "image_tooltip")
 
 
 
@@ -85,7 +85,7 @@ password Base64 encoded: `edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh`
 
 
 
-![alt_text](assets/images/active/image5.png "image_tooltip")
+![alt_text](/assets/images/active/image5.png "image_tooltip")
 
 
 Using `smbmap` again but this time with the username and password obtained we find that we have `READ ONLY` access to NETLOGON, Replication, SYSVOL and `Users`.` `Our next` `target is the` Users share `which appeared to be a valuable target.
@@ -93,7 +93,7 @@ Using `smbmap` again but this time with the username and password obtained we fi
 
 
 
-![alt_text](assets/images/active/image6.png "image_tooltip")
+![alt_text](/assets/images/active/image6.png "image_tooltip")
 
 
 By navigating to Users → SVC_TGS → Desktop → user.txt → get `user.txt `
@@ -102,7 +102,7 @@ By navigating to Users → SVC_TGS → Desktop → user.txt → get `user.txt `
 
 
 
-![alt_text](assets/images/active/image7.png "image_tooltip")
+![alt_text](/assets/images/active/image7.png "image_tooltip")
 
 
 And we get the `user flag`  
@@ -119,7 +119,7 @@ And we get the `user flag`
 
 
 
-![alt_text](aseets/images/active/image8.png "image_tooltip")
+![alt_text](/aseets/images/active/image8.png "image_tooltip")
 
 
 
@@ -130,14 +130,14 @@ And we get the `user flag`
 
 
 
-![alt_text](assets/images/active/image9.png "image_tooltip")
+![alt_text](/assets/images/active/image9.png "image_tooltip")
 
 
 By saving the hash we obtained we can then do some offline bruteforcing using `hashcat` mode 13100 (-m 13100) we get the password: `Ticketmaster1968 `(Using `hashwiki` you can know which mode to use). 
 
 
 
-![alt_text](assets/images/active/image10.png "image_tooltip")
+![alt_text](/assets/images/active/image10.png "image_tooltip")
 
 
 Using `smbmap` again with the Administrator’s credentials we have identified two main targets: `ADMIN$` and `C$`  
@@ -145,7 +145,7 @@ Using `smbmap` again with the Administrator’s credentials we have identified t
 
 
 
-![alt_text](assets/images/active/image11.png "image_tooltip")
+![alt_text](/assets/images/active/image11.png "image_tooltip")
 
 
 After checking both shares we found the root flag!  \
@@ -160,7 +160,7 @@ Finally, we got the `root flag`
 
 
 
-![alt_text](assets/images/active/image12.png "image_tooltip")
+![alt_text](/assets/images/active/image12.png "image_tooltip")
 
 
 
