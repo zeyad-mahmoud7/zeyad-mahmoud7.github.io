@@ -41,10 +41,16 @@ nmap -sS -sV -sC -Pn -T4 10.129.31.152
 By attempting to connect using `smbclient` we have found that anonymous login without a password was allowed. Using `smbmap` to identify all shares’ permissions. We noticed that the `Replication` share has a `READ ONLY` access. 
 
 
+
+
 ![alt_text](images/image2.png "image_tooltip")
 
 
 By accessing `Replication` and downloading all files inside using `mget*` we find a `Groups.xml `file which might contain usernames and passwords
+
+
+
+
 
 
 ![alt_text](images/image3.png "image_tooltip")
@@ -53,6 +59,9 @@ By accessing `Replication` and downloading all files inside using `mget*` we fin
 Looking inside `Groups.xml` we have successfully found a username: `SVC_TGS` and a 
 
 password Base64 encoded: `edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh`
+
+
+
 
 
 ![alt_text](images/image4.png "image_tooltip")
@@ -70,16 +79,22 @@ password Base64 encoded: `edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh`
 * **Exploit:** using `gpp-decrypt` in kali we can decrypt the cpassword and get the plain password: `GPPstillStandingStrong2k18`
 
 
+
+
 ![alt_text](images/image5.png "image_tooltip")
 
 
 Using `smbmap` again but this time with the username and password obtained we find that we have `READ ONLY` access to NETLOGON, Replication, SYSVOL and `Users`.` `Our next` `target is the` Users share `which appeared to be a valuable target.
 
 
+
+
 ![alt_text](images/image6.png "image_tooltip")
 
 
 By navigating to Users → SVC_TGS → Desktop → user.txt → get `user.txt `
+
+
 
 
 ![alt_text](images/image7.png "image_tooltip")
@@ -97,6 +112,7 @@ And we get the `user flag`
 #### We have noticed from the nmap results that the LDAP/S ports are open. Since LDAP was accessible, Impacket enumeration tools such as `GetADUsers.py` are viable. Using the `GetADUsers.py` script we enumerated domain users and spotted the user `Administrator`.
 
 
+
 ![alt_text](images/image8.png "image_tooltip")
 
 
@@ -105,16 +121,23 @@ And we get the `user flag`
 
 
 #### 
+
+
+
+
 ![alt_text](images/image9.png "image_tooltip")
 
 
 By saving the hash we obtained we can then do some offline bruteforcing using `hashcat` mode 13100 (-m 13100) we get the password: `Ticketmaster1968 `(Using `hashwiki` you can know which mode to use). 
 
 
+
 ![alt_text](images/image10.png "image_tooltip")
 
 
 Using `smbmap` again with the Administrator’s credentials we have identified two main targets: `ADMIN$` and `C$`  
+
+
 
 
 ![alt_text](images/image11.png "image_tooltip")
@@ -126,6 +149,8 @@ C$ → Users → Administrator → Desktop → `root.txt`
 get root.txt 
 
 Finally, we got the `root flag` 
+
+
 
 
 ![alt_text](images/image12.png "image_tooltip")
