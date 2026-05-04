@@ -119,14 +119,11 @@ And we get the `user flag`
 
 
 
-![alt_text](/aseets/images/active/image8.png "image_tooltip")
+![alt_text](/assets/images/active/image8.png "image_tooltip")
 
 
 
-#### We then use` GetUserSPNs.py` to identify accounts with SPN and we find that the Administrator user has an SPN configured hence enabling `Kerberoasting`. We get a `TGS hash`
-
-
-#### 
+#### Using` GetUserSPNs.py` we can identify accounts with SPN and we find that the Administrator user has an SPN configured hence enabling `Kerberoasting`. We get a `TGS hash`
 
 
 
