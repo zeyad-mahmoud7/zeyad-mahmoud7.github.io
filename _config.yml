@@ -1,6 +1,11 @@
 title: Zeyad Mahmoud
-description: A curious guy documenting his findings
-remote_theme: pages-themes/minimal@v0.2.0
-avatar: https://github.com/zeyad-mahmoud7.png
-google_analytics: 
-show_downloads: false
+description: A curious guy
+baseurl: "" 
+url: "https://zeyad-mahmoud7.github.io"
+
+# Social Links
+linkedin_username: zeyad-mahmoud7
+github_username: zeyad-mahmoud7
+
+# Theme Settings
+remote_theme: jekyll/minima # Or your preferred dark theme
