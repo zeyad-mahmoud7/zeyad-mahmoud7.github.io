@@ -1,7 +1,6 @@
 title: Zeyad Mahmoud
 description: Check my writeups
-theme: jekyll-theme-hacker
-plugins:
+remote_theme: pages-themes/minimal@v0.2.0plugins:
   - jekyll-remote-theme
 
 # sidebar logo
