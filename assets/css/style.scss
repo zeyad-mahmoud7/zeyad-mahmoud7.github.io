@@ -1,19 +1,21 @@
 ---
 ---
-@import "jekyll-theme-hacker";
+@import "{{ site.theme }}";
 
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  text-align: center !important;
 }
 
 header img {
   width: 120px !important;
   height: 120px !important;
   border-radius: 50% !important;
+  display: block !important;
+  margin: 0 auto 20px auto !important;
   object-fit: cover;
-  border: 2px solid #2ecc71; /* Adds a green "hacker" glow/border */
-  margin-bottom: 20px;
+}
+
+header p, header h1, header a {
+  text-align: center !important;
+  width: 100% !important;
 }
