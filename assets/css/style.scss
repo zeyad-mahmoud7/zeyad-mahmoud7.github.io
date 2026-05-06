@@ -1,83 +1,92 @@
----
----
-@import "{{ site.theme }}";
-
-/* Layout Reset */
-.wrapper {
-  max-width: 900px !important;
-  margin: 0 auto !important;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: flex-start !important;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
 }
 
-header {
-  width: 250px !important;
-  float: none !important;
-  position: sticky !important;
-  top: 40px;
-  text-align: left !important;
-  padding-right: 30px;
+a {
+  color: #58a6ff;
+  text-decoration: none;
 }
 
-header img {
-  width: 100px !important;
-  height: 100px !important;
-  border-radius: 50% !important;
-  margin: 0 0 15px 0 !important;
-  border: 2px solid #eee;
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
 }
 
-header h1 {
-  font-size: 1.5rem !important;
-  margin-bottom: 5px !important;
-}
-
-header p {
-  font-size: 0.95rem !important;
-  color: #666;
-}
-
-section {
-  width: calc(100% - 250px) !important;
-  float: none !important;
-  padding-left: 20px !important;
-}
-
-/* Social Icons */
-.social-links {
-  margin-top: 15px;
+/* Navbar */
+.navbar {
   display: flex;
-  gap: 15px;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
 }
 
-.social-links a svg {
-  width: 24px;
-  height: 24px;
-  fill: #555;
-  transition: fill 0.3s;
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.social-links a:hover svg {
-  fill: #0077b5; /* LinkedIn Blue on hover */
+.logo {
+  width: 35px;
+  border-radius: 50%;
 }
 
-/* Professional Footer */
-footer {
+.nav-right a {
+  margin-left: 15px;
+}
+
+/* Posts Grid */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.post-card {
+  background: #161b22;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-card img {
   width: 100%;
-  margin-top: 50px;
-  padding: 20px 0;
-  border-top: 1px solid #eee;
-  font-size: 0.85rem;
-  color: #999;
-  text-align: center;
+  border-radius: 8px;
 }
 
-/* Back Button */
+/* Post Page */
+.post-container h1 {
+  margin-bottom: 10px;
+}
+
+.post-date {
+  color: gray;
+}
+
+.post-content pre {
+  background: #161b22;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+/* Back button */
 .back-btn {
   display: inline-block;
   margin-bottom: 20px;
-  font-size: 0.9rem;
-  text-decoration: none;
-  color: #444;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #30363d;
 }
