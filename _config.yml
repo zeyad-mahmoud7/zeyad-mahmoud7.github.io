@@ -1,11 +1,16 @@
-title: Zeyad Mahmoud
-description: A curious guy
-baseurl: "" 
+title: "Zeyad Mahmoud"
+description: "Cybersecurity Blog & Writeups"
+baseurl: ""
 url: "https://zeyad-mahmoud7.github.io"
 
-# Social Links
-linkedin_username: zeyad-mahmoud7
-github_username: zeyad-mahmoud7
+markdown: kramdown
+theme: null
 
-# Theme Settings
-remote_theme: jekyll/minima # Or your preferred dark theme
+permalink: /:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
