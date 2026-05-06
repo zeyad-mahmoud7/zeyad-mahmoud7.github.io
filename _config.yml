@@ -5,7 +5,7 @@ url: "https://zeyad-mahmoud7.github.io"
 
 markdown: kramdown
 theme: null
-
+highlighter: rouge
 permalink: /:title/
 
 defaults:
