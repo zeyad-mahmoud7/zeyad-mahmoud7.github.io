@@ -1,17 +1,19 @@
 ---
 layout: default
+title: Home
 ---
 
-# Write-ups
+<div class="container">
+  <h1 class="page-title">Writeups</h1>
 
-<ul class="post-list" style="list-style: none; padding: 0;">
-  {% for post in site.posts %}
-    <li style="margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">
-      <span style="color: #888; font-size: 0.9em;">{{ post.date | date: "%B %d, %Y" }}</span>
-      <br>
-      <a href="{{ post.url | relative_url }}" style="text-decoration: none; font-size: 1.2em; font-weight: bold; color: #58a6ff;">
-        {{ post.title | escape }}
+  <div class="posts-grid">
+    {% for post in site.posts %}
+      <a href="{{ post.url }}" class="post-card">
+        {% if post.image %}
+          <img src="{{ post.image }}" alt="thumbnail">
+        {% endif %}
+        <h2>{{ post.title }}</h2>
       </a>
-    </li>
-  {% endfor %}
-</ul>
+    {% endfor %}
+  </div>
+</div>
