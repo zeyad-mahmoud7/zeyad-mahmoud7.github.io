@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hack The Box: Active Machine Write-up"
+title: "HTB 'Active' Write-up"
 date: 2026-05-04
 categories: [Writeups, HTB]
 tags: [Windows, Kerberoasting, GPP, SMB]
