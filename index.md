@@ -4,8 +4,8 @@ title: Home
 ---
 
 <section class="hero">
-  <h1>Zeyad Mahmoud</h1>
-  <p>Cybersecurity Writeups • Penetration Testing • Red Teaming</p>
+  <h1>My Blog</h1>
+  <p>Check my writeups</p>
 </section>
 
 <div class="container">
