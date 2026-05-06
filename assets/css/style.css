@@ -1,5 +1,6 @@
 /* ===== Global ===== */
-body {
+html, body {
+  height: 100%;
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: #0b0f14;
@@ -16,6 +17,17 @@ a {
   max-width: 1100px;
   margin: auto;
   padding: 20px;
+}
+
+/* ===== Layout Fix (Sticky Footer) ===== */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
 }
 
 /* ===== Navbar ===== */
@@ -56,6 +68,10 @@ a {
 
 .nav-right a:hover {
   opacity: 1;
+}
+
+.nav-right i {
+  font-size: 18px;
 }
 
 /* ===== Hero Section ===== */
