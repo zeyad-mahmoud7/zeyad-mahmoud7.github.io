@@ -1,2 +1,2 @@
-# zeyad.github.io
-My write-ups
+# zeyad-mahmoud7.github.io
+My blog
