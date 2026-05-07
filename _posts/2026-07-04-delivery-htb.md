@@ -62,7 +62,7 @@ even an activation link?
 
 Will it work?
 
-(since you are reading this, it worked)
+(since you are reading this ... it worked)
 
 ![alt_text](/assets/images/delivery/image6.png "image_tooltip")
 
@@ -85,23 +85,11 @@ username: maildeliverer
 password: Youve_G0t_Mail!
 ```
 
-Additional password discovered:
+Additional password discovered but with a note that they are using different variations from this password
 
 ```text
 PleaseSubscribe!
 ```
-
-Let’s try to see what works and what doesn’t.
-
-![alt_text](/assets/images/delivery/image9.png "image_tooltip")
-
-The credentials:
-
-```text
-maildeliverer:Youve_G0t_Mail!
-```
-
-definitely work.
 
 ---
 
@@ -110,8 +98,11 @@ definitely work.
 ```bash
 ssh maildeliverer@10.129.33.109
 ```
+password: Youve_G0t_Mail!
 
-After logging in successfully, we capture the user flag.
+![alt_text](/assets/images/delivery/image9.png "image_tooltip")
+
+After logging in successfully, we captured the user flag.
 
 ![alt_text](/assets/images/delivery/image10.png "image_tooltip")
 
@@ -121,15 +112,18 @@ After logging in successfully, we capture the user flag.
 
 Oops, `sudo` is not allowed.
 
-Let’s look for another way.
-
 ![alt_text](/assets/images/delivery/image11.png "image_tooltip")
+
+Let’s look for another way.
 
 By looking inside the Mattermost configuration files and using the command:
 
 ```bash
 cat config.json | grep -iE "user"
 ```
+(Initially tried `grep -iE "pass"` but it did not reveal anything useful.)
+
+![alt_text](/assets/images/delivery/image12.png "image_tooltip")
 
 we found the following credentials:
 
@@ -137,17 +131,14 @@ we found the following credentials:
 mmuser:Crack_The_MM_Admin_PW
 ```
 
-(Initially tried `grep -iE "pass"` but it did not reveal anything useful.)
-
 We also noticed that localhost is using port `3306`.
 
 But what is running on port `3306`?
 
-![alt_text](/assets/images/delivery/image12.png "image_tooltip")
+![alt_text](/assets/images/delivery/image13.png "image_tooltip")
 
 Using `netcat` we confirm that port `3306` is MySQL.
 
-![alt_text](/assets/images/delivery/image13.png "image_tooltip")
 
 ---
 
@@ -164,6 +155,7 @@ we successfully logged into the database.
 ```bash
 mysql -u mmuser -p
 ```
+![alt_text](/assets/images/delivery/image14.png "image_tooltip")
 
 Inside the Mattermost database, we found a table called `Users` containing `Username` and `Password` fields.
 
@@ -173,13 +165,13 @@ Using the following command:
 select Username, Password from Users;
 ```
 
+![alt_text](/assets/images/delivery/image15.png "image_tooltip")
+
 we obtained the hash of the root user’s password:
 
 ```text
 $2a$10$VM6EeymRxJ29r8Wjkr8Dtev0O.1STWb4.4ScG.anuu7v0EFJwgjjO
 ```
-
-![alt_text](/assets/images/delivery/image14.png "image_tooltip")
 
 ---
 
@@ -188,16 +180,17 @@ $2a$10$VM6EeymRxJ29r8Wjkr8Dtev0O.1STWb4.4ScG.anuu7v0EFJwgjjO
 The root user left us a hint that he is using variations of:
 
 ```text
-PleaseSubscribe!21
+PleaseSubscribe!
 ```
 
 So we use Hashcat rules to generate our own custom wordlist.
 
-![alt_text](/assets/images/delivery/image15.png "image_tooltip")
+![alt_text](/assets/images/delivery/image16.png "image_tooltip")
+
 
 After using `hashcat` mode `3200` against our custom wordlist, we successfully cracked the password.
 
-![alt_text](/assets/images/delivery/image16.png "image_tooltip")
+![alt_text](/assets/images/delivery/image17.png "image_tooltip")
 
 ---
 
@@ -215,18 +208,17 @@ Password:
 PleaseSubscribe!21
 ```
 
-![alt_text](/assets/images/delivery/image17.png "image_tooltip")
-
-We are root and successfully captured the root flag.
+We are Root!
 
 ![alt_text](/assets/images/delivery/image18.png "image_tooltip")
 
----
-
-## **5. Conclusion**
-
-Never leave hints for the hackers.
+and we have successfully captured the root flag.
 
 ![alt_text](/assets/images/delivery/image19.png "image_tooltip")
+
+---
+
+Never leave hints for hackers.
+
 
 See you on the next one.
