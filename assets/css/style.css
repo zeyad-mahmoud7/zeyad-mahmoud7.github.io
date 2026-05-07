@@ -158,6 +158,20 @@ a {
   color: #8b949e;
 }
 
+/* ===== Fix post image sizing ===== */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+}
+
+/* Optional: keep images aligned with text width */
+.post-container .post-content {
+  max-width: 800px;
+  margin: auto;
+}
+
 /* ===== Footer ===== */
 .footer {
   text-align: center;
