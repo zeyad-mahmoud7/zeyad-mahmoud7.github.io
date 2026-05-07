@@ -5,6 +5,7 @@ date: 2026-05-04
 categories: [Writeups, HTB]
 tags: [Windows, Kerberoasting, GPP, SMB]
 author: Zeyad Mahmoud
+image: /assets/images/active/cover.png
 ---
 
 ## **Active Machine Write-up**
