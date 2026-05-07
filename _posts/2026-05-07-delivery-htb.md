@@ -5,6 +5,7 @@ date: 2026-05-07
 categories: [Writeups, HTB]
 tags: [Linux, Mattermost, Ticketing System, Hashcat, MySQL]
 author: Zeyad Mahmoud
+image: /assets/images/delivery/cover.png
 ---
 
 ## **Delivery Machine Write-up**
