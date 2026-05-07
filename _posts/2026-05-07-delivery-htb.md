@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HTB 'Delivery' Write-up"
-date: 2026-07-04
+date: 2026-05-07
 categories: [Writeups, HTB]
 tags: [Linux, Mattermost, Ticketing System, Hashcat, MySQL]
 author: Zeyad Mahmoud
