@@ -39,7 +39,7 @@ After checking port `80`, we see a note stating that we can approach the helpdes
 
 ![alt_text](/assets/images/delivery/image2.png "image_tooltip")
 
-By investigating both the ticketing system and Mattermost, we noticed that we are allowed to use a normal email but we never receive an activation link, apparently unless it's a `@delivery.htb` email.
+By investigating both the ticketing system and Mattermost, we noticed that we are allowed to use a normal email when registering to Mattermost, but we never receive an activation link, apparently, unless it's an email with an `@delivery.htb`.
 
 ![alt_text](/assets/images/delivery/image3.png "image_tooltip")
 
