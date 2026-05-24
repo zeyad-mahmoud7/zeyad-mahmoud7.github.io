@@ -124,7 +124,7 @@ title: Home
         <h3 class="project-name">ZedScan</h3>
         <p class="project-desc">
           An automated network reconnaissance tool that streamlines the scanning workflow for penetration testers.
-          Combines Nmap, Gobuster, and other tools into a unified CLI interface with intelligent output parsing,
+          Combines Nmap, Gobuster, and other tools into a web-based interface with intelligent output parsing,
           vhost enumeration, and subdomain discovery.
         </p>
         <div class="project-tags">
@@ -132,7 +132,7 @@ title: Home
           <span class="tag">Nmap</span>
           <span class="tag">Gobuster</span>
           <span class="tag">Recon</span>
-          <span class="tag">CLI Tool</span>
+          <span class="tag">Web-Based Tool</span>
           <span class="tag">Automation</span>
         </div>
         <div class="project-screenshots">
@@ -212,7 +212,7 @@ title: Home
     <div class="section-header">
       <span class="section-label">Get In Touch</span>
       <h2 class="section-title">Contact Me</h2>
-      <p class="section-sub">Feel free to reach out for collaboration, opportunities, or just to connect.</p>
+      <p class="section-sub">Feel free to reach out for collaboration or opportunities.</p>
     </div>
     <div class="contact-grid fade-in">
       <a href="https://www.linkedin.com/in/zeyad-mahmoud7/" target="_blank" class="contact-card">
