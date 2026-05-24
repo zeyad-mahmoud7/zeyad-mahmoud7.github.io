@@ -5,7 +5,6 @@ title: Home
 
 <!-- ===== HERO ===== -->
 <section id="home" class="hero">
-  <canvas id="particles-canvas"></canvas>
   <div class="hero-content">
     <div class="hero-badge">
       <span class="badge-dot"></span>
@@ -137,7 +136,6 @@ title: Home
           <span class="tag">Automation</span>
         </div>
         <div class="project-screenshots">
-          <p class="screenshots-label">Screenshots</p>
           <div class="screenshots-grid">
             <img src="/assets/images/zedscan/ss1.png" alt="ZedScan screenshot 1" loading="lazy">
             <img src="/assets/images/zedscan/ss2.png" alt="ZedScan screenshot 2" loading="lazy">
