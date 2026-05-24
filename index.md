@@ -17,7 +17,7 @@ title: Home
       <span class="typing-text"></span><span class="cursor">|</span>
     </div>
     <p class="hero-desc">
-      Cybersecurity specialist focused on penetration testing, offensive security, and real-world attack techniques.
+      Penetration tester with experience across web applications, networks, and Active Directory environments.
     </p>
     <div class="hero-btns">
       <a href="#projects" class="btn btn-primary">
@@ -44,7 +44,7 @@ title: Home
     </div>
     <div class="about-grid">
       <div class="about-text fade-in">
-        <p>I'm <strong>Zeyad Mahmoud</strong>, an aspiring <strong>Penetration Tester</strong> and offensive security practitioner with a strong foundation in red team methodologies, vulnerability assessment, and exploitation techniques.</p>
+        <p>I'm <strong>Zeyad Mahmoud</strong>, an aspiring <strong>Penetration Tester</strong> with a foundation in vulnerability assessment and exploitation techniques.</p>
         <p>I specialize in <strong>Active Directory attacks</strong>, network penetration testing, and privilege escalation across Windows and Linux environments. I regularly sharpen my skills on platforms like <strong>Hack The Box</strong>, tackling real-world scenarios that mirror enterprise attack surfaces.</p>
         <p>Beyond hands-on hacking, I build <strong>open-source security tooling</strong>, publish technical writeups, and break down complex vulnerabilities to make offensive security more accessible to the community.</p>
         <div class="about-stats">
