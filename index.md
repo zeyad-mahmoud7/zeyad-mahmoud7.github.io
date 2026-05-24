@@ -136,11 +136,21 @@ title: Home
           <span class="tag">Automation</span>
         </div>
         <div class="project-screenshots">
-          <div class="screenshots-grid">
-            <img src="/assets/images/zedscan/ss1.png" alt="ZedScan screenshot 1" loading="lazy">
-            <img src="/assets/images/zedscan/ss2.png" alt="ZedScan screenshot 2" loading="lazy">
-            <img src="/assets/images/zedscan/ss3.png" alt="ZedScan screenshot 3" loading="lazy">
-            <img src="/assets/images/zedscan/ss4.png" alt="ZedScan screenshot 4" loading="lazy">
+          <div class="screenshot-carousel">
+            <div class="carousel-slides">
+              <img class="carousel-slide active" src="/assets/images/zedscan/ss1.png" alt="ZedScan screenshot 1" loading="lazy">
+              <img class="carousel-slide" src="/assets/images/zedscan/ss2.png" alt="ZedScan screenshot 2" loading="lazy">
+              <img class="carousel-slide" src="/assets/images/zedscan/ss3.png" alt="ZedScan screenshot 3" loading="lazy">
+              <img class="carousel-slide" src="/assets/images/zedscan/ss4.png" alt="ZedScan screenshot 4" loading="lazy">
+            </div>
+            <button class="carousel-btn carousel-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn carousel-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+            <div class="carousel-dots">
+              <span class="carousel-dot active"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+              <span class="carousel-dot"></span>
+            </div>
           </div>
         </div>
       </div>
