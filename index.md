@@ -136,10 +136,25 @@ title: Home
           <span class="tag">CLI Tool</span>
           <span class="tag">Automation</span>
         </div>
+        <div class="project-screenshots">
+          <p class="screenshots-label">Screenshots</p>
+          <div class="screenshots-grid">
+            <img src="/assets/images/zedscan/ss1.png" alt="ZedScan screenshot 1" loading="lazy">
+            <img src="/assets/images/zedscan/ss2.png" alt="ZedScan screenshot 2" loading="lazy">
+            <img src="/assets/images/zedscan/ss3.png" alt="ZedScan screenshot 3" loading="lazy">
+            <img src="/assets/images/zedscan/ss4.png" alt="ZedScan screenshot 4" loading="lazy">
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ===== LIGHTBOX ===== -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true">
+  <span class="lightbox-close" aria-label="Close">&times;</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
 
 <!-- ===== BLOG ===== -->
 <section id="blog" class="section">

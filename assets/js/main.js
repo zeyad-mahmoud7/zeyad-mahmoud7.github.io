@@ -215,3 +215,35 @@
     });
   }, { passive: true });
 })();
+
+/* ===== Screenshot Lightbox ===== */
+(function () {
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightbox-img');
+  if (!lightbox || !lightboxImg) return;
+
+  document.querySelectorAll('.screenshots-grid img').forEach(function (img) {
+    img.addEventListener('click', function () {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(function () { lightboxImg.src = ''; }, 300);
+  }
+
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+})();
