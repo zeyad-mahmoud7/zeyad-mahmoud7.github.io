@@ -1,23 +1,40 @@
-<nav class="navbar">
-  <div class="nav-left">
-    <img src="/assets/images/logo.png" class="logo">
+<nav class="navbar" id="navbar">
+  <a href="/" class="nav-logo">
+    <img src="/assets/images/logo.png" class="logo" alt="Zeyad Mahmoud">
     <span>Zeyad Mahmoud</span>
+  </a>
+
+  <div class="nav-links">
+    <a href="/#home">Home</a>
+    <a href="/#about">About</a>
+    <a href="/#projects">Projects</a>
+    <a href="/#blog">Blog</a>
+    <a href="/#contact">Contact</a>
   </div>
 
-  <div class="nav-right">
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-
-    <a href="https://www.linkedin.com/in/zeyad-mahmoud7/" target="_blank">
+  <div class="nav-icons">
+    <a href="https://www.linkedin.com/in/zeyad-mahmoud7/" target="_blank" title="LinkedIn">
       <i class="fab fa-linkedin"></i>
     </a>
-
-    <a href="https://github.com/zeyad-mahmoud7" target="_blank">
+    <a href="https://github.com/zeyad-mahmoud7" target="_blank" title="GitHub">
       <i class="fab fa-github"></i>
     </a>
-
-    <a href="https://profile.hackthebox.com/profile/019d2f1d-77ae-72bc-9bee-7ba659d0023b" target="_blank">
+    <a href="https://profile.hackthebox.com/profile/019d2f1d-77ae-72bc-9bee-7ba659d0023b" target="_blank" title="HackTheBox">
       <i class="fas fa-cube"></i>
     </a>
   </div>
+
+  <button class="nav-menu-btn" aria-label="Toggle menu">
+    <i class="fas fa-bars"></i>
+  </button>
 </nav>
+
+<div class="mobile-nav" id="mobile-nav">
+  <a href="/#home"><i class="fas fa-house"></i> Home</a>
+  <a href="/#about"><i class="fas fa-user"></i> About</a>
+  <a href="/#projects"><i class="fas fa-code"></i> Projects</a>
+  <a href="/#blog"><i class="fas fa-pen-nib"></i> Blog</a>
+  <a href="/#contact"><i class="fas fa-envelope"></i> Contact</a>
+  <a href="https://github.com/zeyad-mahmoud7" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+  <a href="https://www.linkedin.com/in/zeyad-mahmoud7/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+</div>
