@@ -40,14 +40,14 @@ title: Home
 <section id="about" class="section">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">Who I Am</span>
+      <span class="section-label">Who Am I</span>
       <h2 class="section-title">About Me</h2>
     </div>
     <div class="about-grid">
       <div class="about-text fade-in">
-        <p>I'm <strong>Zeyad Mahmoud</strong>, a cybersecurity enthusiast specializing in penetration testing and offensive security.</p>
-        <p>I focus on real-world attack techniques, Active Directory exploitation, and hands-on labs such as Hack The Box. I enjoy breaking things apart to understand how they work — and how to defend them.</p>
-        <p>I document my journey, share writeups, and build security tools to help the community learn practical cybersecurity.</p>
+        <p>I'm <strong>Zeyad Mahmoud</strong>, an aspiring <strong>Penetration Tester</strong> and offensive security practitioner with a strong foundation in red team methodologies, vulnerability assessment, and exploitation techniques.</p>
+        <p>I specialize in <strong>Active Directory attacks</strong>, network penetration testing, and privilege escalation across Windows and Linux environments. I regularly sharpen my skills on platforms like <strong>Hack The Box</strong>, tackling real-world scenarios that mirror enterprise attack surfaces.</p>
+        <p>Beyond hands-on hacking, I build <strong>open-source security tooling</strong>, publish technical writeups, and break down complex vulnerabilities to make offensive security more accessible to the community.</p>
         <div class="about-stats">
           <div class="stat">
             <span class="stat-num" data-target="4">0</span>
